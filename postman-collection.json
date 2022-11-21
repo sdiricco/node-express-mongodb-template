@@ -1,0 +1,447 @@
+{
+	"info": {
+		"_postman_id": "e69819f7-a5dc-438f-b3f9-7bfe9c6bb796",
+		"name": "Workout api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19968464"
+	},
+	"item": [
+		{
+			"name": "Workouts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/v1/workouts?limit=20&page=1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"workouts"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "20"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Workouts",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/v1/workouts?limit=20&page=1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"workouts"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "20"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "4306"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"10d2-JgcQGxe6r1Rd/PMHSq6unXKqIa0\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 20 Nov 2022 19:12:54 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"OK\",\n    \"data\": [\n        {\n            \"name\": \"workout name 1\",\n            \"mode\": \"AMRAP 20\",\n            \"equipment\": [\n                \"rack\",\n                \"barbell\",\n                \"abmat\"\n            ],\n            \"exercises\": [\n                \"25 toes to bars\",\n                \"25 thrusters\",\n                \"25 abmat sit-ups\"\n            ],\n            \"trainerTips\": [\n                \"Split your toes to bars into two sets maximum\",\n                \"Go unbroken on the thrusters\",\n                \"Take the abmat sit-ups as a chance to normalize your breath\"\n            ],\n            \"id\": \"6674c9f5-36ab-4ab1-b143-14626d14e9c3\",\n            \"createdAt\": \"11/20/2022, 6:38:34 PM\",\n            \"updatedAt\": \"11/20/2022, 7:12:49 PM\"\n        },\n        {\n            \"name\": \"workout name 2\",\n            \"mode\": \"AMRAP 20\",\n            \"equipment\": [\n                \"rack\",\n                \"barbell\",\n                \"abmat\"\n            ],\n            \"exercises\": [\n                \"15 toes to bars\",\n                \"10 thrusters\",\n                \"30 abmat sit-ups\"\n            ],\n            \"trainerTips\": [\n                \"Split your toes to bars into two sets maximum\",\n                \"Go unbroken on the thrusters\",\n                \"Take the abmat sit-ups as a chance to normalize your breath\"\n            ],\n            \"id\": \"8ac3286d-4f77-4438-9e16-9790add38a5a\",\n            \"createdAt\": \"11/20/2022, 6:54:36 PM\",\n            \"updatedAt\": \"11/20/2022, 6:54:36 PM\"\n        },\n        {\n            \"name\": \"workout name 3\",\n            \"mode\": \"AMRAP 20\",\n            \"equipment\": [\n                \"rack\",\n                \"barbell\",\n                \"abmat\"\n            ],\n            \"exercises\": [\n                \"15 toes to bars\",\n                \"10 thrusters\",\n                \"30 abmat sit-ups\"\n            ],\n            \"trainerTips\": [\n                \"Split your toes to bars into two sets maximum\",\n                \"Go unbroken on the thrusters\",\n                \"Take the abmat sit-ups as a chance to normalize your breath\"\n            ],\n            \"id\": \"1e25cdb6-c301-43c6-ae47-19c71860f591\",\n            \"createdAt\": \"11/20/2022, 6:54:49 PM\",\n            \"updatedAt\": \"11/20/2022, 6:54:49 PM\"\n        },\n        {\n            \"name\": \"workout name 4\",\n            \"mode\": \"AMRAP 20\",\n            \"equipment\": [\n                \"rack\",\n                \"barbell\",\n                \"abmat\"\n            ],\n            \"exercises\": [\n                \"15 toes to bars\",\n                \"10 thrusters\",\n                \"30 abmat sit-ups\"\n            ],\n            \"trainerTips\": [\n                \"Split your toes to bars into two sets maximum\",\n                \"Go unbroken on the thrusters\",\n                \"Take the abmat sit-ups as a chance to normalize your breath\"\n            ],\n            \"id\": \"13c72788-71a9-479b-a54e-2140a127ead9\",\n            \"createdAt\": \"11/20/2022, 6:54:55 PM\",\n            \"updatedAt\": \"11/20/2022, 6:54:55 PM\"\n        },\n        {\n            \"name\": \"workout name 5\",\n            \"mode\": \"AMRAP 20\",\n            \"equipment\": [\n                \"rack\",\n                \"barbell\",\n                \"abmat\"\n            ],\n            \"exercises\": [\n                \"15 toes to bars\",\n                \"10 thrusters\",\n                \"30 abmat sit-ups\"\n            ],\n            \"trainerTips\": [\n                \"Split your toes to bars into two sets maximum\",\n                \"Go unbroken on the thrusters\",\n                \"Take the abmat sit-ups as a chance to normalize your breath\"\n            ],\n            \"id\": \"76602987-f23b-4bc4-8786-c4a0444bc535\",\n            \"createdAt\": \"11/20/2022, 6:55:02 PM\",\n            \"updatedAt\": \"11/20/2022, 6:55:02 PM\"\n        },\n        {\n            \"name\": \"workout name 6\",\n            \"mode\": \"AMRAP 20\",\n            \"equipment\": [\n                \"rack\",\n                \"barbell\",\n                \"abmat\"\n            ],\n            \"exercises\": [\n                \"15 toes to bars\",\n                \"10 thrusters\",\n                \"30 abmat sit-ups\"\n            ],\n            \"trainerTips\": [\n                \"Split your toes to bars into two sets maximum\",\n                \"Go unbroken on the thrusters\",\n                \"Take the abmat sit-ups as a chance to normalize your breath\"\n            ],\n            \"id\": \"a815018b-5da5-420b-a3dd-0f2bfee623e0\",\n            \"createdAt\": \"11/20/2022, 6:56:09 PM\",\n            \"updatedAt\": \"11/20/2022, 6:56:09 PM\"\n        },\n        {\n            \"name\": \"workout name 7\",\n            \"mode\": \"AMRAP 20\",\n            \"equipment\": [\n                \"rack\",\n                \"barbell\",\n                \"abmat\"\n            ],\n            \"exercises\": [\n                \"15 toes to bars\",\n                \"10 thrusters\",\n                \"30 abmat sit-ups\"\n            ],\n            \"trainerTips\": [\n                \"Split your toes to bars into two sets maximum\",\n                \"Go unbroken on the thrusters\",\n                \"Take the abmat sit-ups as a chance to normalize your breath\"\n            ],\n            \"id\": \"9c869b91-87a3-4baf-ae15-0ae5d97cae89\",\n            \"createdAt\": \"11/20/2022, 6:56:14 PM\",\n            \"updatedAt\": \"11/20/2022, 6:56:14 PM\"\n        },\n        {\n            \"name\": \"workout name 8\",\n            \"mode\": \"AMRAP 20\",\n            \"equipment\": [\n                \"rack\",\n                \"barbell\",\n                \"abmat\"\n            ],\n            \"exercises\": [\n                \"15 toes to bars\",\n                \"10 thrusters\",\n                \"30 abmat sit-ups\"\n            ],\n            \"trainerTips\": [\n                \"Split your toes to bars into two sets maximum\",\n                \"Go unbroken on the thrusters\",\n                \"Take the abmat sit-ups as a chance to normalize your breath\"\n            ],\n            \"id\": \"ffcc00af-f511-4e0e-a47f-53bb3593df21\",\n            \"createdAt\": \"11/20/2022, 6:56:19 PM\",\n            \"updatedAt\": \"11/20/2022, 6:56:19 PM\"\n        },\n        {\n            \"name\": \"workout name 9\",\n            \"mode\": \"AMRAP 20\",\n            \"equipment\": [\n                \"rack\",\n                \"barbell\",\n                \"abmat\"\n            ],\n            \"exercises\": [\n                \"15 toes to bars\",\n                \"10 thrusters\",\n                \"30 abmat sit-ups\"\n            ],\n            \"trainerTips\": [\n                \"Split your toes to bars into two sets maximum\",\n                \"Go unbroken on the thrusters\",\n                \"Take the abmat sit-ups as a chance to normalize your breath\"\n            ],\n            \"id\": \"16c29197-8bac-44dd-b6c4-a6b1f8ed895c\",\n            \"createdAt\": \"11/20/2022, 6:56:23 PM\",\n            \"updatedAt\": \"11/20/2022, 6:56:23 PM\"\n        },\n        {\n            \"name\": \"workout name 10\",\n            \"mode\": \"AMRAP 20\",\n            \"equipment\": [\n                \"rack\",\n                \"barbell\",\n                \"abmat\"\n            ],\n            \"exercises\": [\n                \"15 toes to bars\",\n                \"10 thrusters\",\n                \"30 abmat sit-ups\"\n            ],\n            \"trainerTips\": [\n                \"Split your toes to bars into two sets maximum\",\n                \"Go unbroken on the thrusters\",\n                \"Take the abmat sit-ups as a chance to normalize your breath\"\n            ],\n            \"id\": \"c4178819-1cdf-44e4-9238-6191e71506dd\",\n            \"createdAt\": \"11/20/2022, 6:56:28 PM\",\n            \"updatedAt\": \"11/20/2022, 6:56:28 PM\"\n        }\n    ],\n    \"paging\": {\n        \"limit\": 20,\n        \"page\": 1,\n        \"pages\": 1\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Workout",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"workout name 10\",\n  \"mode\": \"AMRAP 20\",\n  \"equipment\": [\n    \"rack\",\n    \"barbell\",\n    \"abmat\"\n  ],\n  \"exercises\": [\n    \"15 toes to bars\",\n    \"10 thrusters\",\n    \"30 abmat sit-ups\"\n  ],\n  \"trainerTips\": [\n    \"Split your toes to bars into two sets maximum\",\n    \"Go unbroken on the thrusters\",\n    \"Take the abmat sit-ups as a chance to normalize your breath\"\n  ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/v1/workouts",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"workouts"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Workout",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"workout name 1\",\n  \"mode\": \"AMRAP 20\",\n  \"equipment\": [\n    \"rack\",\n    \"barbell\",\n    \"abmat\"\n  ],\n  \"exercises\": [\n    \"15 toes to bars\",\n    \"10 thrusters\",\n    \"30 abmat sit-ups\"\n  ],\n  \"trainerTips\": [\n    \"Split your toes to bars into two sets maximum\",\n    \"Go unbroken on the thrusters\",\n    \"Take the abmat sit-ups as a chance to normalize your breath\"\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/v1/workouts",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"workouts"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "446"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1be-hG7eNj4v+bjvdK8qK4VInIOm8qI\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 20 Nov 2022 18:38:34 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"OK\",\n    \"data\": {\n        \"name\": \"workout name 1\",\n        \"mode\": \"AMRAP 20\",\n        \"equipment\": [\n            \"rack\",\n            \"barbell\",\n            \"abmat\"\n        ],\n        \"exercises\": [\n            \"15 toes to bars\",\n            \"10 thrusters\",\n            \"30 abmat sit-ups\"\n        ],\n        \"trainerTips\": [\n            \"Split your toes to bars into two sets maximum\",\n            \"Go unbroken on the thrusters\",\n            \"Take the abmat sit-ups as a chance to normalize your breath\"\n        ],\n        \"id\": \"6674c9f5-36ab-4ab1-b143-14626d14e9c3\",\n        \"createdAt\": \"11/20/2022, 6:38:34 PM\",\n        \"updatedAt\": \"11/20/2022, 6:38:34 PM\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Workout",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/v1/workouts/d8be2362-7b68-4ea4-a1f6-03f8bc4eede7",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"workouts",
+						"d8be2362-7b68-4ea4-a1f6-03f8bc4eede7"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Workout",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/v1/workouts/d8be2362-7b68-4ea4-a1f6-03f8bc4eede7",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"workouts",
+								"d8be2362-7b68-4ea4-a1f6-03f8bc4eede7"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "417"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1a1-7U0wuSt9GDdqdH1PI3C4Zi/n6Cg\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 19 Nov 2022 17:01:36 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"OK\",\n    \"data\": {\n        \"id\": \"d8be2362-7b68-4ea4-a1f6-03f8bc4eede7\",\n        \"name\": \"Heavy DT\",\n        \"mode\": \"5 Rounds For Time\",\n        \"equipment\": [\n            \"barbell\",\n            \"rope\"\n        ],\n        \"exercises\": [\n            \"12 deadlifts\",\n            \"9 hang power cleans\",\n            \"6 push jerks\"\n        ],\n        \"createdAt\": \"11/20/2021, 5:39:07 PM\",\n        \"updatedAt\": \"4/22/2022, 5:49:18 PM\",\n        \"trainerTips\": [\n            \"Aim for unbroken push jerks\",\n            \"The first three rounds might feel terrible, but stick to it\",\n            \"RX Weights: 205lb/145lb\"\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Workouts",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/v1/workouts/a24d2618-01d1-4682-9288-8de1343e53c7",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"workouts",
+						"a24d2618-01d1-4682-9288-8de1343e53c7"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Workouts",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/v1/workouts/d8be2362-7b68-4ea4-a1f6-03f8bc4eede7",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"workouts",
+								"d8be2362-7b68-4ea4-a1f6-03f8bc4eede7"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "417"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1a1-7U0wuSt9GDdqdH1PI3C4Zi/n6Cg\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 20 Nov 2022 18:52:20 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"OK\",\n    \"data\": {\n        \"id\": \"d8be2362-7b68-4ea4-a1f6-03f8bc4eede7\",\n        \"name\": \"Heavy DT\",\n        \"mode\": \"5 Rounds For Time\",\n        \"equipment\": [\n            \"barbell\",\n            \"rope\"\n        ],\n        \"exercises\": [\n            \"12 deadlifts\",\n            \"9 hang power cleans\",\n            \"6 push jerks\"\n        ],\n        \"createdAt\": \"11/20/2021, 5:39:07 PM\",\n        \"updatedAt\": \"4/22/2022, 5:49:18 PM\",\n        \"trainerTips\": [\n            \"Aim for unbroken push jerks\",\n            \"The first three rounds might feel terrible, but stick to it\",\n            \"RX Weights: 205lb/145lb\"\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Workouts",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"workout name 1\",\n    \"mode\": \"AMRAP 20\",\n    \"equipment\": [\n        \"rack\",\n        \"barbell\",\n        \"abmat\"\n    ],\n    \"exercises\": [\n        \"25 toes to bars\",\n        \"25 thrusters\",\n        \"25 abmat sit-ups\"\n    ],\n    \"trainerTips\": [\n        \"Split your toes to bars into two sets maximum\",\n        \"Go unbroken on the thrusters\",\n        \"Take the abmat sit-ups as a chance to normalize your breath\"\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/v1/workouts/6674c9f5-36ab-4ab1-b143-14626d14e9c3",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"workouts",
+						"6674c9f5-36ab-4ab1-b143-14626d14e9c3"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Workouts",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"workout name 1\",\n    \"mode\": \"AMRAP 20\",\n    \"equipment\": [\n        \"rack\",\n        \"barbell\",\n        \"abmat\"\n    ],\n    \"exercises\": [\n        \"25 toes to bars\",\n        \"25 thrusters\",\n        \"25 abmat sit-ups\"\n    ],\n    \"trainerTips\": [\n        \"Split your toes to bars into two sets maximum\",\n        \"Go unbroken on the thrusters\",\n        \"Take the abmat sit-ups as a chance to normalize your breath\"\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/v1/workouts/6674c9f5-36ab-4ab1-b143-14626d14e9c3",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"workouts",
+								"6674c9f5-36ab-4ab1-b143-14626d14e9c3"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "446"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1be-nZIDdNOkJaTuJV1ARXvolJid7aQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 20 Nov 2022 19:12:49 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"OK\",\n    \"data\": {\n        \"name\": \"workout name 1\",\n        \"mode\": \"AMRAP 20\",\n        \"equipment\": [\n            \"rack\",\n            \"barbell\",\n            \"abmat\"\n        ],\n        \"exercises\": [\n            \"25 toes to bars\",\n            \"25 thrusters\",\n            \"25 abmat sit-ups\"\n        ],\n        \"trainerTips\": [\n            \"Split your toes to bars into two sets maximum\",\n            \"Go unbroken on the thrusters\",\n            \"Take the abmat sit-ups as a chance to normalize your breath\"\n        ],\n        \"id\": \"6674c9f5-36ab-4ab1-b143-14626d14e9c3\",\n        \"createdAt\": \"11/20/2022, 6:38:34 PM\",\n        \"updatedAt\": \"11/20/2022, 7:12:49 PM\"\n    }\n}"
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,281 @@
+openapi: 3.0.0
+info:
+  title: Workout API
+  description: The official workout **REST** api
+  version: 1.0.0
+servers:
+  - url: https://workout-api-6ay8.onrender.com
+    description: Beta server
+
+paths:
+ /api/v1/workouts:
+   get:
+     tags:
+       - Workouts
+     parameters:
+       - in: query
+         name: mode
+         schema:
+           type: string
+         description: The mode of a workout
+       - in: query
+         name: limit
+         schema:
+           type: integer
+           minimum: 1
+           default: 10
+         description: The paginations's limit
+       - in: query
+         name: page
+         schema:
+           type: integer
+           minimum: 1
+           default: 1
+         description: The paginations's page
+     responses:
+       200:
+         description: OK
+         content:
+           application/json:
+             schema:
+               type: object
+               properties:
+                 status:
+                   type: string
+                   example: OK
+                 data:
+                   type: array 
+                   items: 
+                     $ref: "#/components/schemas/Workout"
+                 paging:
+                   type: object 
+                   properties: 
+                     total: 
+                       type: integer
+                       example: 10
+                     page: 
+                       type: integer
+                       example: 1
+                     pages: 
+                       type: integer
+                       example: 5
+       5XX:
+         description: FAILED
+         content:
+           application/json:
+             schema:
+               type: object
+               properties:
+                 status: 
+                   type: string
+                   example: FAILED
+                 data:
+                   type: object
+                   properties:
+                     error:
+                       type: string 
+                       example: "Some error message"
+   post:
+     tags:
+       - Workouts
+     requestBody:
+       description: Workout entry
+       required: true
+       content:
+         application/json:
+           schema:
+             $ref: '#/components/schemas/Workout'
+     responses:
+       200:
+         description: OK
+         content:
+           application/json:
+             schema:
+               type: object
+               properties:
+                 status:
+                   type: string
+                   example: OK
+                 data:
+                   $ref: "#/components/schemas/Workout"
+       5XX:
+         description: FAILED
+         content:
+           application/json:
+             schema:
+               type: object
+               properties:
+                 status: 
+                   type: string
+                   example: FAILED
+                 data:
+                   type: object
+                   properties:
+                     error:
+                       type: string 
+                       example: "Some error message"
+
+ /api/v1/workouts/{workoutId}:
+   get:
+     tags:
+       - Workouts
+     parameters:
+       - in: path
+         name: workoutId
+         required: true
+         schema:
+           type: string
+           example: d8be2362-7b68-4ea4-a1f6-03f8bc4eede7
+         description: The workout ID
+     responses:
+       200:
+         description: OK
+         content:
+           application/json:
+             schema:
+               type: object
+               properties:
+                 status:
+                   type: string
+                   example: OK
+                 data:
+                   $ref: "#/components/schemas/Workout"
+       5XX:
+         description: FAILED
+         content:
+           application/json:
+             schema:
+               type: object
+               properties:
+                 status: 
+                   type: string
+                   example: FAILED
+                 data:
+                   type: object
+                   properties:
+                     error:
+                       type: string 
+                       example: "Some error message"
+   patch:
+     tags:
+       - Workouts
+     parameters:
+       - in: path
+         name: workoutId
+         required: true
+         schema:
+           type: string
+           example: d8be2362-7b68-4ea4-a1f6-03f8bc4eede7
+         description: The workout ID
+     requestBody:
+       description: Workout entry
+       required: true
+       content:
+         application/json:
+           schema:
+             $ref: '#/components/schemas/Workout'
+     responses:
+       200:
+         description: OK
+         content:
+           application/json:
+             schema:
+               type: object
+               properties:
+                 status:
+                   type: string
+                   example: OK
+                 data:
+                   $ref: "#/components/schemas/Workout"
+       5XX:
+         description: FAILED
+         content:
+           application/json:
+             schema:
+               type: object
+               properties:
+                 status: 
+                   type: string
+                   example: FAILED
+                 data:
+                   type: object
+                   properties:
+                     error:
+                       type: string 
+                       example: "Some error message"
+   delete:
+     tags:
+       - Workouts
+     parameters:
+       - in: path
+         name: workoutId
+         required: true
+         schema:
+           type: string
+           example: d8be2362-7b68-4ea4-a1f6-03f8bc4eede7
+         description: The workout ID
+     responses:
+       200:
+         description: OK
+         content:
+           application/json:
+             schema:
+               type: object
+               properties:
+                 status:
+                   type: string
+                   example: OK
+                 data:
+                   $ref: "#/components/schemas/Workout"
+       5XX:
+         description: FAILED
+         content:
+           application/json:
+             schema:
+               type: object
+               properties:
+                 status: 
+                   type: string
+                   example: FAILED
+                 data:
+                   type: object
+                   properties:
+                     error:
+                       type: string 
+                       example: "Some error message"
+
+components:
+  schemas:
+     Workout:
+       type: object
+       properties:
+         id:
+           type: string
+           example: 61dbae02-c147-4e28-863c-db7bd402b2d6
+         name:
+           type: string
+           example: Tommy V
+         mode:
+           type: string
+           example: For Time
+         equipment:
+           type: array
+           items:
+             type: string
+           example: ["barbell", "rope"]
+         exercises:
+           type: array
+           items:
+             type: string
+           example: ["21 thrusters", "12 rope climbs, 15 ft", "15 thrusters", "9 rope climbs, 15 ft", "9 thrusters", "6 rope climbs, 15 ft"]
+         createdAt:
+           type: string
+           example: 4/20/2022, 2:21:56 PM
+         updatedAt:
+           type: string
+           example: 4/20/2022, 2:21:56 PM
+         trainerTips:
+           type: array
+           items:
+             type: string
+           example: ["Split the 21 thrusters as needed", "Try to do the 9 and 6 thrusters unbroken", "RX Weights: 115lb/75lb"]
